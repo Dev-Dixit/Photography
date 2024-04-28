@@ -7,6 +7,12 @@
     --white: #ffffff;
     --max-width: 1200px;
     --header-font: "Merriweather", serif;
+
+    --slide-width: min(25vw, 300px);
+	--slide-aspect: 2 / 3;
+
+	--slide-transition-duration: 800ms;
+	--slide-transition-easing: ease;
 }
 
 *{
@@ -488,51 +494,21 @@ nav{
     display: none;
     
   }
-
-  .slider-section {
-    padding-top: 15vh;
-    /* padding-bottom: 15vh; */
-    width: 100%;
-    height: 100vh;
-      /* background-color: red; */
-    
-  }
-
-  .slider {
-    width: calc(3 * var(--slide-width));
-    height: calc(2 * var(--slide-height));
-    display: flex;
-    align-items: center;
-  }
-
 }
 
 /* =========  slider ========== */
 
 
 .slider-section {
-	padding-top: 15vh;
-  /* padding-bottom: 15vh; */
-	/* width: 100%; */
 	height: 100vh;
-    /* background-color: red; */
 	display: grid;
 	place-items: center;
 	overflow: hidden;
-    position: relative;
-    z-index: 1;
-
+	position: relative;
+	z-index: 1;
 	/* background: rgba(0, 0, 0, 0.787); */
-	
 }
 
-/* body {
-	display: grid;
-	place-items: center;
-	overflow: hidden;
-
-	background: rgba(0, 0, 0, 0.787);
-} */
 
 button {
 	border: none;
@@ -563,7 +539,7 @@ button {
 	align-items: center;
 	opacity: 0.7;
 	transition: opacity 250ms cubic-bezier(0.215, 0.61, 0.355, 1);
-	z-index: 99;
+	z-index: 999;
 
 	& svg {
 		width: var(--size);
@@ -721,7 +697,6 @@ button {
 
 	&::before {
 		background: rgba(0, 0, 0, 0.8);
-    /* background-color: #fff; */
 		backdrop-filter: blur(8px);
 	}
 
@@ -830,7 +805,7 @@ button {
 /* ------------------------------------------------ */
 
 .loader {
-	/* position: fixed;
+	position: fixed;
 	inset: 0;
 
 	display: grid;
@@ -840,13 +815,13 @@ button {
 	z-index: 1000;
 
 	opacity: 1;
-	transition: opacity 0.5s ease-out; */
+	transition: opacity 0.5s ease-out;
 
 	.loader__text {
 		font-family: var(--font-clash-display);
 		font-size: clamp(2rem, 2vw, 5rem);
 		font-weight: 800;
-		color: transparent;
+		color: #fff;
 	}
 }
 
@@ -869,5 +844,3 @@ button {
 		}
 	}
 } */
-
-

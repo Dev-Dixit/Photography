@@ -63,13 +63,13 @@ menuBtn.addEventListener("click", (e) => {
   }
 });
 
-
-// slider's javascript
-
 import imagesLoaded from "https://esm.sh/imagesloaded";
 
 console.clear();
 
+// -------------------------------------------------
+// ------------------ Utilities --------------------
+// -------------------------------------------------
 
 // Math utilities
 const wrap = (n, max) => (n + max) % max;
@@ -306,7 +306,6 @@ function change(direction) {
 			slideInfo: document.querySelector(".slide-info[data-next]"),
 			slideBg: document.querySelector(".slide__bg[data-next]")
 		};
-		
 
 		Object.values(current).map((el) => el.removeAttribute("data-current"));
 		Object.values(previous).map((el) => el.removeAttribute("data-previous"));
